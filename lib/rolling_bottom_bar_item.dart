@@ -17,6 +17,7 @@ class RollingItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Padding(
       padding: const EdgeInsets.all(0.0),
       child: SizedBox.fromSize(
@@ -60,15 +61,13 @@ class RollingActiveItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var media=MediaQuery.of(context);
+
     return InkWell(
-      child: SizedBox.fromSize(
-        size: const Size(kCircleRadius * 2, kCircleRadius * 2),
-        child: SizedBox(
-          height: kItemSize,
-          width: kItemSize,
-          child: icon,
-        ),
-      ),
+    //  child: SizedBox.fromSize(
+       // size: Size(kCircleRadius * 2.5*media.size.aspectRatio, kCircleRadius * 2.5*media.size.aspectRatio),
+        child: icon,
+    //  ),
       onTap: () => onTap!(index),
     );
   }

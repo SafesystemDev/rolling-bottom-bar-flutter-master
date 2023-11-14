@@ -73,9 +73,11 @@ class _RollingBottomBarState extends State<RollingBottomBar> {
             for (var i = 0; i < widget.items!.length; i++) ...[
               if (i == _currentIndex)
                 Positioned(
-                  top: kMargin - kCircleRadius,
-                  left: kCircleMargin + _itemXByScrollPosition(_scrollPosition),
-                  child: RollingActiveItem(
+                  top: (kMargin - kCircleRadius)+7.5,
+                  left: kCircleMargin + _itemXByScrollPosition(_scrollPosition)+7.5,
+                  width: 25,
+                  height: 25,
+                  child:RollingActiveItem(
                     i,
                     icon: widget.items![i],
                     scrollPosition: _scrollPosition,
